@@ -73,5 +73,5 @@ docker-compose up tyk -d
 ```
 
 ```bash
-curl --cert ./tyk/certs/client.crt --key ./tyk/certs/client.key --cacert ./tyk/certs/server-cert.pem https://tyk.local/api/path
+curl --cert ./tyk/certs/client.crt --key ./tyk/certs/client.key --cacert ./tyk/certs/server-cert.pem https://tyk.local/bin/get
 ```
