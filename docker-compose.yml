@@ -1,0 +1,25 @@
+name: tyk_mtls
+
+services:
+  tyk:
+    # image: docker.tyk.io/tyk-gateway/tyk-gateway:v5.3
+    image: docker.tyk.io/tyk-gateway/tyk-gateway:v5.5.0
+    ports:
+      - '443:443'
+    volumes:
+      - ./tyk/conf/tyk.json:/opt/tyk-gateway/tyk.conf
+      - ./tyk/apps:/opt/tyk-gateway/apps
+      - ./tyk/certs:/opt/tyk-gateway/certs
+      - ./tyk/middleware:/opt/tyk-gateway/middleware
+    environment:
+      TYK_GW_SECRET: foo
+    depends_on:
+      - redis
+
+  redis:
+    image: redis:7.0-alpine
+    container_name: tyk_redis
+    ports:
+      - '6389:6379'
+      - '8011:8001'
+

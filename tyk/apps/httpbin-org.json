@@ -1,0 +1,25 @@
+{
+    "name": "httpbin",
+    "api_id": "1",
+    "active": true,
+    "org_id": "default",
+    "use_keyless": true,
+    "use_mutual_tls_auth": true,
+    "enabled": true,
+    "client_certificates": [
+        "/opt/tyk-gateway/certs/rootCA.pem"
+    ],
+    "version_data": {
+        "not_versioned": true,
+        "versions": {
+            "Default": {
+                "name": "Default"
+            }
+        }
+    },
+    "proxy": {
+        "target_url": "https://httpbin.org/",
+				"listen_path": "/bin/",
+        "strip_listen_path": true
+    }
+}

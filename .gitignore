@@ -1,0 +1,8 @@
+tyk/certs/client.crt
+tyk/certs/client.csr
+tyk/certs/client.key
+tyk/certs/rootCA.key
+tyk/certs/rootCA.pem
+tyk/certs/rootCA.srl
+tyk/certs/server-cert.pem
+tyk/certs/server-key.pem
